@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ML API</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!--===============================================================================================-->
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="{{ url_for('static', filename='styles/main.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='styles/util.css') }}">
+<!--===============================================================================================-->
+	<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</head>
+
+<style>
+.header {
+	background-color: rgb(245, 241, 241); /* Set header background color to white */
+
+	.dark-textarea {
+    text-align: center;
+    background-color: black;
+    color: rgb(14, 13, 13);
+    border: none;
+    padding: 10px;
+    font-size: 18pt;
+    resize: none;
+    width: 100%;
+  }
+}
+</style>
+
+<header id="main-menu" class="main-menu header"> <!-- Add 'header' class here -->
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-7">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu">
+						<i class="fa fa-bars"></i>
+					</button>
+				</div>
+				<ul id="headernavigation" class="menu-list nav navbar-nav">
+					<li class="active"><a href="notebook">Notebook</a></li>
+					<li><a href="/login">Logout</a></li>
+				</ul><!-- /.menu-list -->
+			</div>
+		</div><!-- /.row -->
+	</div><!-- /.container -->
+</header><!-- /#main-menu -->
+
+<body>
+
+
+
+	<div class="bg-contact2" style="background-image: url('../static/bg.gif');">
+		<div class="container-contact2">
+			<div class="wrap-contact2">
+				<form class="contact2-form validate-form" action="{{ url_for('predict1')}}" method="post">
+					<span class="contact2-form-title">
+						Phishing Website Prediction
+					</span>
+					<div class="centered">
+					<h3>Type your url here</h3>
+					</div>
+					<div style="text-align: center;">
+						<textarea name="message" rows="6" cols="50" required="required" class="dark-textarea"></textarea>
+					  </div>
+
+					<div class="container-contact2-form-btn">
+						<div class="wrap-contact2-form-btn">
+							<div class="contact2-form-bgbtn"></div>
+							<button class="contact2-form-btn" type="submit">
+								Predict
+							</button>
+						</div>
+					</div>
+				</form>
+				<br>
+	   			<br>
+   					<p class="predict">{{ prediction }}</p>
+
+			</div>
+		</div>
+	</div>
+
+
+
+</body>
+
+</html>

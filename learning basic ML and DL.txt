@@ -1,0 +1,15 @@
+Machine learning
+https://www.geeksforgeeks.org/machine-learning-algorithms/
+
+Deep Learning
+https://www.javatpoint.com/deep-learning-algorithms
+
+beautifulsoup
+https://pypi.org/project/beautifulsoup4/
+https://www.geeksforgeeks.org/implementing-web-scraping-python-beautiful-soup/
+
+
+
+phishing
+
+https://www.geeksforgeeks.org/what-is-phishing/
